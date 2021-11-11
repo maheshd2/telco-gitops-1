@@ -8,6 +8,8 @@ metadata:
 ---
 apiVersion: ran.openshift.io/v1
 kind: SiteConfig
+labels:
+  app.kubernetes.io/instance: clusters
 metadata:
   name: "ocp-48-cluster-k"
   namespace: "ocp-48-cluster-k"
