@@ -1,0 +1,4 @@
+resources:
+#- post-sync.yaml
+#- pre-sync.yaml
+- sno-ocp-48-cluster-k.yaml  
