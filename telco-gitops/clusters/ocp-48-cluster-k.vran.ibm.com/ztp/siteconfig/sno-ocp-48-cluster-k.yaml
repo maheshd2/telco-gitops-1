@@ -29,7 +29,7 @@ spec:
       - cidr: 10.128.0.0/14
         hostPrefix: 23
     machineNetwork:
-      - cidr: 9.37.195.0/26
+      - cidr: 9.37.131.0/26
     serviceNetwork:
       - 172.30.0.0/16
         #additionalNTPSources:
