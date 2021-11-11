@@ -9,7 +9,7 @@ spec:
 #    namespace: test-sno-siteconfig
   project: default
   source:
-    path: clusters/ocp-48-cluster-k.vran.ibm.com/ztp/gitops
+    path: telco-gitops/clusters/ocp-48-cluster-k.vran.ibm.com/ztp/gitops
     repoURL: https://github.com/Sin317/ztp-manifests.git
     targetRevision: develop
   syncPolicy:

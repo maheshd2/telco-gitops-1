@@ -8,7 +8,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: clusters/ocp-48-cluster-k.vran.ibm.com/ztp/siteconfig
+    path: telco-gitops/clusters/ocp-48-cluster-k.vran.ibm.com/ztp/siteconfig
     repoURL: https://github.com/Sin317/ztp-manifests.git
     targetRevision: develop
   syncPolicy:
