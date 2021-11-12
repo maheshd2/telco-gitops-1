@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: ocp-48-cluster-k
-  labels:
-    name: ocp-48-cluster-k
