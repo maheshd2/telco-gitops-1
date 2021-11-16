@@ -22,7 +22,7 @@ spec:
     serviceNetwork:
        - 172.30.0.0/16
     machineNetwork:
-       - cidr: 9.37.195.0/24
+       - cidr: "9.37.195.31/24"
     nodes:
        - hostName: "master-4-ocp48.ocp-48-cluster-k.cp.fyre.ibm.com"
          bmcAddress: "idrac-virtualmedia+https://9.37.131.39/redfish/v1/Systems/System.Embedded.1"
