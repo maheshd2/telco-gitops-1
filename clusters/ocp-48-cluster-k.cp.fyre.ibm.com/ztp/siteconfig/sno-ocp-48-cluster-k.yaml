@@ -12,7 +12,7 @@ spec:
   clusters:
   - clusterName: "ocp-48-cluster-k"
     clusterType: "sno"
-    clusterProfile: ""
+    clusterProfile: "cu"
     clusterLabels:
       common: true
       sites : "ocp-48-cluster-k"
