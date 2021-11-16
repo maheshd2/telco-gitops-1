@@ -41,6 +41,6 @@ metadata:
     managed-by: argocd.argoproj.io
   labels:
     argocd.argoproj.io/secret-type: repository
-  name: repo-Sin317
+  name: repo-sin317-telco-gitops
   namespace: ocp-48-cluster-k
 type: Opaque
