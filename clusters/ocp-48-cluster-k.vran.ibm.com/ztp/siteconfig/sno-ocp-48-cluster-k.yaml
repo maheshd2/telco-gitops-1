@@ -8,7 +8,7 @@ spec:
   pullSecretRef:
     name: "assisted-deployment-pull-secret"
   clusterImageSetNameRef: "vran-ocp-v4.8.18"
-  sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDD0HEjx3ULvhRp+qqUY88g/utx9WEwz06mryHcLnVZy3eSTXull7yady/Dg7wt8hr9mQwpS58QuTA/cL3mHa3zkMMiRnd1Nr/VctuXLWo7SxYzf8aCOIMNrldmlUteueZhJsR5EDINk3S8hhAwg3pJPFsyeA6vl5+gq4fC/nC60LFMNx6OZ4j7c1w4T4hV9cdb4PQ6Sbhf3eg5UE8ZMN4t3+kyE6WvOM3Ck/o/TxxaNz1SwTP2wOanG171hSuCUDWjLCs64al2S3xgV3hV90r6I66sQmL2cyYOFg30Sczk8ylBNA9Llnq21Cucg1fLuU/23czhxU+UxqsZZILnaVZT"
+  sshPublicKey: ""
   clusters:
   - clusterName: "ocp-48-cluster-k"
     clusterType: "sno"
