@@ -11,7 +11,7 @@ metadata:
   name: common
   labels:
     name: common
-    argocd.argoproj.io/managed-by: ocp-48-cluster-k
+    #argocd.argoproj.io/managed-by: ocp-48-cluster-k
 ---
 apiVersion: v1
 kind: Namespace
@@ -19,7 +19,7 @@ metadata:
   name: clusters-sub 
   labels:
     name: clusters-sub
-    argocd.argoproj.io/managed-by: ocp-48-cluster-k
+    #argocd.argoproj.io/managed-by: ocp-48-cluster-k
 ---
 apiVersion: v1
 kind: Namespace
@@ -27,7 +27,7 @@ metadata:
   name: policies-sub
   labels:
     name: policies-sub
-    argocd.argoproj.io/managed-by: ocp-48-cluster-k
+    #argocd.argoproj.io/managed-by: ocp-48-cluster-k
 ---
 apiVersion: v1
 data:
