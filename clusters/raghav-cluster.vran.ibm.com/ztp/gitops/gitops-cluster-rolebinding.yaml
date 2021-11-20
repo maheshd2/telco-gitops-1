@@ -28,9 +28,6 @@ subjects:
   - kind: ServiceAccount
     name: raghav-cluster-argocd-server
     namespace: raghav-cluster
-  - kind: ServiceAccount
-    name: raghav-cluster-argocd-dex-server
-    namespace: raghav-cluster
 ---
 # WARNING: ONLY USE THIS FOR MANAGING CLUSTERS NOT FOR REGULAR USERS
 apiVersion: rbac.authorization.k8s.io/v1
@@ -48,8 +45,5 @@ subjects:
   # NOTE: THIS INSTANCE IT IS ONLY FOR CLUSTER ADMINS
   - kind: ServiceAccount
     name: raghav-cluster-argocd-server
-    namespace: raghav-cluster   
-  - kind: ServiceAccount
-    name: raghav-cluster-argocd-dex-server
-    namespace: raghav-cluster
+    namespace: raghav-cluster    
     
