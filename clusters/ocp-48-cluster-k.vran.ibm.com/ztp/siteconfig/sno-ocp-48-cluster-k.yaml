@@ -13,6 +13,7 @@ spec:
   - clusterName: "ocp-48-cluster-k"
     clusterType: "sno"
     clusterProfile: "du"
+    numMasters: 1
     clusterLabels:
       common: true
       sites : "ocp-48-cluster-k"
@@ -48,4 +49,3 @@ spec:
                    dhcp: true
                  ipv6:
                    enabled: false
-        
