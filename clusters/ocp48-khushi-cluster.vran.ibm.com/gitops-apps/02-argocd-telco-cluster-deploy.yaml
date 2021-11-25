@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: clusters
+  name: clusters-ocp48-khushi-cluster.vran.ibm.com
   namespace: openshift-gitops
 spec: 
   destination:
