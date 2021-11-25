@@ -11,7 +11,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: ocp48-khushi-cluster-siteconfig
+    namespace: openshift-gitops-siteconfig
   project: default
   source:
     path: clusters/ocp48-khushi-cluster.vran.ibm.com/ztp/siteconfig

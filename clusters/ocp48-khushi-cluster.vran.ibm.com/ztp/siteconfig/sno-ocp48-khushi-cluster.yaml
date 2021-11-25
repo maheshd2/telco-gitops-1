@@ -25,11 +25,11 @@ spec:
     machineNetwork:
        - cidr: 9.37.195.0/24
     nodes:
-       - hostName: "master-4-ocp48.ocp48-khushi-cluster.vran.ibm.com"
-         bmcAddress: "idrac-virtualmedia+https://9.37.131.39/redfish/v1/Systems/System.Embedded.1"
+       - hostName: "master-8-ocp48.ocp48-khushi-cluster.vran.ibm.com"
+         bmcAddress: "idrac-virtualmedia+https://9.37.131.104/redfish/v1/Systems/System.Embedded.1"
          bmcCredentialsName:
-           name: "ocp48-khushi-cluster-master-4-ocp48-bmh-secret"
-         bootMACAddress: "F0:D4:E2:E8:BE:94"
+           name: "ocp48-khushi-cluster-master-8-ocp48-bmh-secret"
+         bootMACAddress: "3C:EC:EF:5E:3C:14"
          bootMode: "UEFI"
          rootDeviceHints:
            deviceName: "/dev/sda"
@@ -37,13 +37,13 @@ spec:
          nodeNetwork:
             interfaces:
             - name: eno1
-              macAddress: "F0:D4:E2:E8:BE:94"
+              macAddress: "3C:EC:EF:5E:3C:14"
             config:
                interfaces:
                - name: eno1
                  type: ethernet
                  state: up
-                 macAddress: "F0:D4:E2:E8:BE:94"
+                 macAddress: "3C:EC:EF:5E:3C:14"
                  ipv4:
                    enabled: true
                    dhcp: true

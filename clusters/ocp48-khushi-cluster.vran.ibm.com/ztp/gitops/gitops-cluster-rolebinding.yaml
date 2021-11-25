@@ -4,7 +4,7 @@ kind: ClusterRole
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  name: ocp48-khushi-cluster-custom-role
+  name: openshift-gitops-custom-role
 rules:
 - apiGroups:
   - agent-install.openshift.io
@@ -16,34 +16,34 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: ocp48-khushi-cluster-custom-rolebinding
+  name: openshift-gitops-custom-rolebinding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: ocp48-khushi-cluster-custom-role
+  name: openshift-gitops-custom-role
 subjects:
   - kind: ServiceAccount
-    name: ocp48-khushi-cluster-argocd-application-controller
-    namespace: ocp48-khushi-cluster
+    name: openshift-gitops-argocd-application-controller
+    namespace: openshift-gitops
   - kind: ServiceAccount
-    name: ocp48-khushi-cluster-argocd-server
-    namespace: ocp48-khushi-cluster
+    name: openshift-gitops-argocd-server
+    namespace: openshift-gitops
 ---
 # WARNING: ONLY USE THIS FOR MANAGING CLUSTERS NOT FOR REGULAR USERS
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: ocp48-khushi-cluster-cluster-admin-rolebinding
+  name: openshift-gitops-cluster-admin-rolebinding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: cluster-admin
 subjects:
   - kind: ServiceAccount
-    name: ocp48-khushi-cluster-argocd-application-controller
-    namespace: ocp48-khushi-cluster
+    name: openshift-gitops-argocd-application-controller
+    namespace: openshift-gitops
   # NOTE: THIS INSTANCE IT IS ONLY FOR CLUSTER ADMINS
   - kind: ServiceAccount
-    name: ocp48-khushi-cluster-argocd-server
-    namespace: ocp48-khushi-cluster    
+    name: openshift-gitops-argocd-server
+    namespace: openshift-gitops    
     

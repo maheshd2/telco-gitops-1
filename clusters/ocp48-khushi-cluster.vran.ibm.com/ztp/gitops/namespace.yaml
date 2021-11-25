@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ocp48-khushi-cluster
+  name: openshift-gitops
   labels:
-    name: ocp48-khushi-cluster
+    name: openshift-gitops
 ---
 apiVersion: v1
 kind: Namespace
@@ -11,7 +11,7 @@ metadata:
   name: common
   labels:
     name: common
-    argocd.argoproj.io/managed-by: ocp48-khushi-cluster
+    argocd.argoproj.io/managed-by: openshift-gitops
 ---
 apiVersion: v1
 kind: Namespace
@@ -19,7 +19,7 @@ metadata:
   name: clusters-sub 
   labels:
     name: clusters-sub
-    argocd.argoproj.io/managed-by: ocp48-khushi-cluster
+    argocd.argoproj.io/managed-by: openshift-gitops
 ---
 apiVersion: v1
 kind: Namespace
@@ -27,7 +27,7 @@ metadata:
   name: policies-sub
   labels:
     name: policies-sub
-    argocd.argoproj.io/managed-by: ocp48-khushi-cluster
+    argocd.argoproj.io/managed-by: openshift-gitops
 ---
 apiVersion: v1
 data:
@@ -42,5 +42,5 @@ metadata:
   labels:
     argocd.argoproj.io/secret-type: repository
   name: repo-sin317-telco-gitops
-  namespace: ocp48-khushi-cluster
+  namespace: openshift-gitops
 type: Opaque

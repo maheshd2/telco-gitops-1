@@ -2,8 +2,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ArgoCD
 metadata:
-  name: ocp48-khushi-cluster
-  namespace: ocp48-khushi-cluster
+  name: openshift-gitops
+  namespace: openshift-gitops
 spec:
   applicationSet:
     resources:
