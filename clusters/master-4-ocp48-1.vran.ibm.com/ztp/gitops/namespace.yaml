@@ -35,5 +35,5 @@ metadata:
   labels:
     argocd.argoproj.io/secret-type: repository
   name: repo-sin317-telco-gitops
-  namespace: openshift-gitops
+  namespace: master-4-ocp48-1
 type: Opaque

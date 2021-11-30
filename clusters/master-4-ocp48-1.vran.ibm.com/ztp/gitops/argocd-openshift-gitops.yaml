@@ -2,8 +2,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ArgoCD
 metadata:
-  name: openshift-gitops
-  namespace: openshift-gitops
+  name: master-4-ocp48-1
+  namespace: master-4-ocp48-1
 spec:
   applicationSet:
     resources:
