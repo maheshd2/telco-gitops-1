@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: master-4-ocp48-1.vran.ibm.com-gitops
-  namespace: master-4-ocp48-1
+  namespace: openshift-gitops
 spec:
   destination:
     server: https://kubernetes.default.svc
