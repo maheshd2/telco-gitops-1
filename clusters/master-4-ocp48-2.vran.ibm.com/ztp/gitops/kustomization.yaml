@@ -7,4 +7,3 @@ resources:
   - gitops-cluster-rolebinding.yaml
   - app-project.yaml
   - git-secret.yaml
-  - site-config-crd.yaml
