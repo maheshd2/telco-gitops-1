@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: ztp-site-generator
-          image: mirror-registry-vranmgmt1.fyre.ibm.com:5000/ocpmetal/ocp-metal-ui:latest
+          image: mirror-registry-vranmgmt1.fyre.ibm.com:5000/olmlocal/autolabeller:latest
           command: ["/bin/bash", "pre-sync-entrypoint.sh"]
       restartPolicy: Never
   backoffLimit: 0
