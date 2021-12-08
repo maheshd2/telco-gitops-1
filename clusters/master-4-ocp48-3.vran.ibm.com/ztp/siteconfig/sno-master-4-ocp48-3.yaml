@@ -7,7 +7,7 @@ spec:
   baseDomain: "vran.ibm.com"
   pullSecretRef:
     name: "assisted-deployment-pull-secret"
-  clusterImageSetNameRef: "vran-ocp-4.8.18" 
+  clusterImageSetNameRef: "vran-ocp-4.8.18-k" 
   sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZA9BIFmQ/FwR1Id+6tMzolcIYbiPFudrSEL37mZkgcngk6qJw0VHMRor4hYjJt8mEAA10F8I7/ZYpFE+70WWm94jPZ8Co/8QGANbPtGlEaCAhma9VdpseM4/sVUYtYGs9FuwdRWNE9xCYf2jd25COZsEKUU/6tko/tGO7Xx4v0Rm5/e4iK/yoTZjMMXIu92rkJzIAytQfmv08Tc13dZI0M2CRj/cYbVYgRAwhalDJyo/2gbydrTrTuF6OiU3tRog57ARDEc7h3PkVt/rxTgH+JmS3Nyg+Yg+BYk2vSmErClU6kmYSmcDbvbBM/6L3k2QoqFxo8Tbquw083/7l2QlV"
   clusters:
   - clusterName: "master-4-ocp48-3"
