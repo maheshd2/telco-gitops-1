@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: ztp-site-generator
-          image: mirror-registry-vranmgmt1.fyre.ibm.com:5000/redhat_emp1/ztp-site-generator:v4.8.0-10
+          image: mirror-registry-vranmgmt1.fyre.ibm.com:5000/test:v1
           command: ["/bin/bash", "pre-sync-entrypoint.sh"]
       restartPolicy: Never
   backoffLimit: 0
