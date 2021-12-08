@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: ztp-site-generator
-          image: quay.io/redhat_emp1/ztp-site-generator:v4.10-rc.1 
+          image: mirror-registry-vranmgmt1.fyre.ibm.com:5000/redhat_emp1/ztp-site-generator:v4.8.0-10
           command: ["/bin/bash", "post-sync-entrypoint.sh"]
       restartPolicy: Never
   backoffLimit: 0
