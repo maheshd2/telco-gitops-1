@@ -1,0 +1,50 @@
+apiVersion: ran.openshift.io/v1
+kind: SiteConfig
+metadata:
+  name: "new-ocp-48-cluster-vbmc"
+  namespace: "new-ocp-48-cluster-vbmc"
+spec:
+  baseDomain: "rtp.raleigh.ibm.com"
+  pullSecretRef:
+    name: "assisted-deployment-pull-secret"
+  clusterImageSetNameRef: "vran-ocp-v4.8.18"
+  sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMLbtnVS3dabEkH6+4Oe9da1a/qs6aA/knlKT1t6ctMEn0jxT6x7PxvCGbBo6DpIlO8tYV2hBDNOpeoqfri/Zb85AKie2T24S5s5BAkFZEiAcllnJKV4NGE4CgP5Q56CrIvtboP/EGDaU9LfuVapyxikbTrxcLBVIOodqGNCzqteAi2yCG6B/nY1CToI6cnh/MP7neom2dANRM3y2ehrOoQINn450NuHTnzZhbYeqmz0/Y6so2scSe/I4ySd/VBLVf2cr39EhqV7hHSqWv6doohgmxc6j0DDp1HOULGuvacQrLM7aZT2VGsKZeVk30AJK2fO+VMDXpQQz6LUxHe1AJDMqjb1xkfZmpcS1Dwu+cE6bRaRtFDmgf8ihuzYYvIuVGeCFXqrsK5f3LYr9XPtzHC3RMcEyRxKGL8Hftmj/s8Qn2CBJNpD4hONG0DDL6NQ3Xxl08Hzsn5nbrBab8n7UqbWSEl5WcKk9iAhM8uw2jPRA6MjIGlTo0XnF89s6fZnk= root@localhost.localdomain"
+  clusters:
+  - clusterName: "new-ocp-48-cluster-vbmc"
+    clusterType: "sno"
+    clusterProfile: "du"
+    clusterLabels:
+      common: true
+      sites : "new-ocp-48-cluster-vbmc"
+    clusterNetwork:
+       - cidr: 10.128.0.0/14
+         hostPrefix: 23
+    serviceNetwork:
+       - 172.30.0.0/16
+    machineNetwork:
+       - cidr: 9.37.195.0/24
+    nodes:
+       - hostName: "mdn-master-0.rtp.raleigh.ibm.com"
+         bmcAddress: "idrac-virtualmedia+http://9.37.195.62:8080/redfish/v1/Systems/149e8c89-3644-417b-8e53-98615a8e8792"
+         bmcCredentialsName:
+           name: "vbmc"
+         bootMACAddress: "aa:aa:aa:aa:bb:07"
+         bootMode: "UEFI"
+         rootDeviceHints:
+           deviceName: "/dev/sda"
+         cpuset: "0-1"
+         nodeNetwork:
+            interfaces:
+            - name: eth1
+              macAddress: "aa:aa:aa:aa:bb:07"
+            config:
+               interfaces:
+               - name: eth1
+                 type: ethernet
+                 state: up
+                 macAddress: "aa:aa:aa:aa:bb:07"
+                 ipv4:
+                   enabled: true
+                   dhcp: true
+                 ipv6:
+                   enabled: false
