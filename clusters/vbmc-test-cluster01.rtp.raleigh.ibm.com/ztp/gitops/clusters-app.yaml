@@ -15,7 +15,7 @@ spec:
   project: default
   source:
     path: clusters/vbmc-test-cluster01.rtp.raleigh.ibm.com/ztp/siteconfig
-    repoURL: https://github.com/traghave123/telco-gitops.git
+    repoURL: https://github.com/maheshd2/telco-gitops-1.git
     targetRevision: master
   syncPolicy:
     automated:

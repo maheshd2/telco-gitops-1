@@ -24,16 +24,16 @@ metadata:
 ---
 apiVersion: v1
 data:
-  password: Z2hwX280WFROWEtmRlNLUzI0NG1ONlJBaHpSamJtQm1weDNaSzM1Yw==
+  password: bUROQEdpdEh1YjE4
   type: Z2l0
-  url: aHR0cHM6Ly9naXRodWIuY29tL3RyYWdoYXZlMTIzL3RlbGNvLWdpdG9wcy5naXQ=
-  username: dHJhZ2hhdmUxMjM=
+  url: aHR0cHM6Ly9naXRodWIuY29tL21haGVzaGQyL3RlbGNvLWdpdG9wcy0xLmdpdA==
+  username: bWFoZXNoZDI=
 kind: Secret
 metadata:
   annotations:
     managed-by: argocd.argoproj.io
   labels:
     argocd.argoproj.io/secret-type: repository
-  name: repo-traghave123-telco-gitops
+  name: repo-maheshd2-telco-gitops-1
   namespace: vbmc-test-cluster01
 type: Opaque
