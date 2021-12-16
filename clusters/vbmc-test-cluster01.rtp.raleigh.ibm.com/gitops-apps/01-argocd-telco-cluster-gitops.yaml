@@ -11,7 +11,7 @@ spec:
   source:
     path: clusters/vbmc-test-cluster01.rtp.raleigh.ibm.com/ztp/gitops
     repoURL: https://github.com/maheshd2/telco-gitops-1.git
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated:
       prune: false
