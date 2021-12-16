@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: clusters-sub
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: new-new-ocp-48-cluster-vbmc-new
+  namespace: openshift-gitops
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: new-new-ocp-48-cluster-vbmc-new
+  project: default
+  source:
+    path: clusters/new-ocp-48-cluster-vbmc-new.rtp.raleigh.ibm.com/siteconfig
+    repoURL: https://github.com/maheshd2/telco-gitops-1.git
+    targetRevision: main
+    insecureIgnoreHostKey: true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
