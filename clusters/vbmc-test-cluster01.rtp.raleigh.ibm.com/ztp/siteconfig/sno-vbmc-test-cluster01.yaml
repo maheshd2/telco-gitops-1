@@ -1,0 +1,51 @@
+apiVersion: ran.openshift.io/v1
+kind: SiteConfig
+metadata:
+  name: "vbmc-test-cluster01"
+  namespace: "vbmc-test-cluster01"
+spec:
+  baseDomain: "rtp.raleigh.ibm.com"
+  pullSecretRef:
+    name: "assisted-deployment-pull-secret"
+  clusterImageSetNameRef: "vran-ocp-v4.8.18"
+  sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDD0HEjx3ULvhRp+qqUY88g/utx9WEwz06mryHcLnVZy3eSTXull7yady/Dg7wt8hr9mQwpS58QuTA/cL3mHa3zkMMiRnd1Nr/VctuXLWo7SxYzf8aCOIMNrldmlUteueZhJsR5EDINk3S8hhAwg3pJPFsyeA6vl5+gq4fC/nC60LFMNx6OZ4j7c1w4T4hV9cdb4PQ6Sbhf3eg5UE8ZMN4t3+kyE6WvOM3Ck/o/TxxaNz1SwTP2wOanG171hSuCUDWjLCs64al2S3xgV3hV90r6I66sQmL2cyYOFg30Sczk8ylBNA9Llnq21Cucg1fLuU/23czhxU+UxqsZZILnaVZT"
+  clusters:
+  - clusterName: "vbmc-test-cluster01"
+    clusterType: "sno"
+    clusterProfile: "cu"
+    numMasters: 1
+    clusterLabels:
+      common: true
+      sites : "vbmc-test-cluster01"
+    clusterNetwork:
+       - cidr: 10.128.0.0/14
+         hostPrefix: 23
+    serviceNetwork:
+       - 172.30.0.0/16
+    machineNetwork:
+       - cidr: 9.37.195.0/24
+    nodes:
+       - hostName: "mdn-master-0.rtp.raleigh.ibm.com"
+         bmcAddress: "redfish-virtualmedia+http://9.37.195.62:8080/redfish/v1/Systems/e0097ba1-ccb3-47f1-9390-bab640d04b70"
+         bmcCredentialsName:
+           name: "vbmc"
+         bootMACAddress: "aa:aa:aa:aa:bb:07"
+         bootMode: "UEFI"
+         rootDeviceHints:
+           deviceName: "/dev/sda"
+         cpuset: "0-1"
+         nodeNetwork:
+            interfaces:
+            - name: eth1
+              macAddress: "aa:aa:aa:aa:bb:07"
+            config:
+               interfaces:
+               - name: eth1
+                 type: ethernet
+                 state: up
+                 macAddress: "aa:aa:aa:aa:bb:07"
+                 ipv4:
+                   enabled: true
+                   dhcp: true
+                 ipv6:
+                   enabled: false

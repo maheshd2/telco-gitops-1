@@ -1,0 +1,49 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  name: vbmc-test-cluster01-custom-role
+rules:
+- apiGroups:
+  - agent-install.openshift.io
+  resources:
+  - '*'
+  verbs:
+  - '*'
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: vbmc-test-cluster01-custom-rolebinding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: vbmc-test-cluster01-custom-role
+subjects:
+  - kind: ServiceAccount
+    name: vbmc-test-cluster01-argocd-application-controller
+    namespace: vbmc-test-cluster01
+  - kind: ServiceAccount
+    name: vbmc-test-cluster01-argocd-server
+    namespace: vbmc-test-cluster01
+---
+# WARNING: ONLY USE THIS FOR MANAGING CLUSTERS NOT FOR REGULAR USERS
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: vbmc-test-cluster01-cluster-admin-rolebinding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - kind: ServiceAccount
+    name: vbmc-test-cluster01-argocd-application-controller
+    namespace: vbmc-test-cluster01
+  # NOTE: THIS INSTANCE IT IS ONLY FOR CLUSTER ADMINS
+  - kind: ServiceAccount
+    name: vbmc-test-cluster01-argocd-server
+    namespace: vbmc-test-cluster01    
+    
